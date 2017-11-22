@@ -1,0 +1,38 @@
+/*
+ ============================================================================
+ Name        : A3P2.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+float ConeVol(float h, float r){
+	return M_PI*r*r*h*(1.00000/3.00000);
+}
+
+
+int main(void) {
+
+	float i, j,v;
+	printf ("h	r = 1	r = 2	r = 3	r = 4	r = 5	r = 6	r = 7	r = 8	r = 9\n");
+
+	for(i = 1.00; i < 11; i++){
+
+		printf("%0.0f",i);
+		for(j = 1.00; j < 10; j++){
+
+			v = ConeVol(i,j);
+
+			printf("	%0.2f",v);
+
+		}
+		printf("\n");
+	}
+	return EXIT_SUCCESS;
+}
